@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe6e6;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  z-index: 1;
+}
+
+h1 {
+  color: #ff4d4d;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  padding: 15px 40px;
+  font-size: 1.2em;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  z-index: 2;
+}
+
+.yes-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.no-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.random-image {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  z-index: 0;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.success-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  object-fit: cover;
+}
+
+.heart {
+  position: absolute;
+  font-size: 2em;
+  color: rgba(255, 77, 77, 0.3);
+  animation: heartFloat 6s infinite;
+  z-index: 0;
+}
+
+@keyframes heartFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #666;
+  padding: 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .btn {
+    padding: 12px 30px;
+    font-size: 1em;
+  }
+
+  .random-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .photo-gallery {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .photo {
+    width: calc(100% - 20px);
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .heart {
+    font-size: 1.5em;
+  }
+}
